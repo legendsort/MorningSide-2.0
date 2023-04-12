@@ -76,4 +76,12 @@ html {
   .inner-shadow {
     box-shadow: inset 0px -2px 10px 0px rgba(200, 226, 255, 0.45);
   }
+  .team {
+    transition: transform .8s; /* Animation */
+    cursor: pointer
+  }
+
+  .team:hover{
+    transform: scale(0.9); 
+  }
 }

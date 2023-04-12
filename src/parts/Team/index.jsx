@@ -1,5 +1,4 @@
-import React from "react";
-import MemberCard from "./MemberCard";
+import React from "react";import MemberCard from "./MemberCard";
 import { team } from "../../constants/team";
 
 const Team = () => {
@@ -15,17 +14,32 @@ const Team = () => {
           </h2>
         </div>
       </div>
-      {team.map((member, index) => (
-        <MemberCard
-          key={index}
-          name={member.name}
-          photo={member.photo}
-          role={member.role}
-          description={member.description}
-          links={member.links}
-          style={index % 2}
-        />
-      ))}
+      <div className="grid grid-cols-10 ">
+        <div className="col-span-9">
+          {team.map((member, index) => (
+            <MemberCard
+              key={index}
+              name={member.name}
+              photo={member.photo}
+              role={member.role}
+              description={member.description}
+              links={member.links}
+              style={index % 2}
+            />
+          ))}
+        </div>
+        <div className="col-span-1 pt-10 relative">
+          <div className={`text-gray-400 sticky top-8 right-10`}>
+            <a href="#ceo"> {team[0].name} </a>
+          </div>
+          <div className={`text-gray-400 sticky top-14 right-10`}>
+            <a href="#head"> {team[1].name} </a>
+          </div>
+          <div className={`text-gray-400 sticky top-20 right-10`}>
+            <a href="#lead"> {team[2].name} </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
