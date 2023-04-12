@@ -19,7 +19,6 @@ html {
     @apply border border-solid border-gray-400 my-2;
   }
 	.card {
-		width: 100%;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 7px;
@@ -82,6 +81,12 @@ html {
   }
 
   .team:hover{
-    transform: scale(0.9); 
+    transform: scale(0.95); 
+  }
+
+  .service-canvas {
+    width: 50%;
+    height: 50%;
+    z-index: 10;
   }
 }
