@@ -10,10 +10,9 @@ const LandingPage = () => {
 	return (
 		<div>
 			<Hero />
-			<Services />
 			<AboutUs />
+			<Services />
 			<Team />
-			<Blog />
 			<Contact />
 		</div>
 	)

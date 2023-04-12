@@ -4,21 +4,15 @@ import { team } from "../../constants/team";
 
 const Team = () => {
   return (
-    <div className="container box-shadow pl-3 md:pl-10">
-      <div className="pt-32 container">
+    <div className="container pl-3 md:pl-10">
+      <div className="pt-32 container md:pb-20 xl:pb-32">
         <div className="w-full mr-20 mx-auto flex flex-col justify-center items-center ">
-          <h2 className="text-primary text-4xl font-bold mb-5 leading-none uppercase text-center">
-            Our Team
+          <h1 className="text-primary text-4xl md:text-6xl font-bold mb-5 leading-none text-center w-2/3 mx-auo">
+            We bring your ideas to life
+          </h1>
+          <h2 className="pt-10 text-primary underline text-lg font-bold mb-5 leading-none text-center">
+            Meet the team
           </h2>
-          <div className="max-w-[800px]">
-            <p className="text-primary font-medium text-md my-5 text-center mx-auto">
-              Our team is composed of experienced and dedicated individuals who
-              are passionate about artificial intelligence and its potential to
-              transform industries. From software developers to data scientists,
-              we work together to develop cutting-edge AI solutions that help
-              businesses achieve their goals.
-            </p>
-          </div>
         </div>
       </div>
       {team.map((member, index) => (

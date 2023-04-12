@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
 
   return (
-    <div className="container">
-      <div className="mx-0 md:mx-10 m-10">
+    <div className=" inner-shadow mt-10 p-10">
+      <div className="container md:w-[80%] mx-auto">
         <div className="grid grid-cols-10 ">
           <div className = "col-span-10 flex items-center">
             <img className="my-5 w-[200px] h-[60px] " src="/images/Logo/logo.png" alt="logo" />

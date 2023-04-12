@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const ContactForm = () => {
-  const [status, setStatus] = useState("Submit");
+  const [status, setStatus] = useState("Send");
   const form = useRef();
 
   const handleSubmit = (e) => {
@@ -20,79 +20,61 @@ const ContactForm = () => {
         (result) => {
           form.current.reset();
           toast.success("Email sent successfully!"); // Show success toast notification
-          setStatus("Submit");
+          setStatus("Send");
         },
         (error) => {
           toast.error("There was an error sending the email."); // Show error toast notification
-          setStatus("Submit");
+          setStatus("Send");
         }
       );
   };
 
   return (
     <>
-      <div className="bg-white dark:bg-gray-900 " style={{ width: "80%" }}>
-        <div className="py-8 lg:py-16 px-4 mx-auto w-full">
-          <h2 className="mb-10 text-2xl font-bold tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-            Contact Us
-          </h2>
-
+      <div className="bg-white dark:bg-gray-900 md:w-[60%] md:mx-auto">
+        <div className="py-8 lg:py-16 px-4 mx-auto full">
           <form
             ref={form}
             action="#"
-            className="space-y-8 text-xl"
+            className="space-y-5 text-base md:text-3xl"
             onSubmit={handleSubmit}
           >
-            <div className="pb-10">
-              <label
-                htmlFor="email"
-                className="block mb-5 font-medium text-gray-900 dark:text-gray-300"
-              >
-                Your email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-5  sm:p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="name@flowbite.com"
-                required
-              />
+            <div className="flex flex-col md:flex-row gap-5 ">
+              <div className="border-b border-gray-300 md:w-1/2">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1  leading-tight focus:outline-none"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+
+              <div className="border-b border-gray-300 md:w-1/2">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1  leading-tight focus:outline-none"
+                  placeholder="Your email"
+                  required
+                />
+              </div>
             </div>
-            <div className="pb-10">
-              <label
-                htmlFor="subject"
-                className="block mb-5 font-medium text-gray-900 dark:text-gray-300 mb-5"
-              >
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                className="block p-5 sm:p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="Let us know how we can help you"
-                required
-              />
-            </div>
-            <div className="sm:col-span-2 mb-10">
-              <label
-                htmlFor="message"
-                className="block mb-2 sm font-medium text-gray-900 dark:text-gray-400"
-              >
-                Your message
-              </label>
+            <div className="border-b border-gray-300 ">
               <textarea
+                type="text"
                 id="message"
                 name="message"
                 rows={6}
-                className="block p-5 sm:p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Leave a comment..."
+                className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1  leading-tight focus:outline-none"
+                placeholder="How can we help you?"
               ></textarea>
             </div>
-            <div className=" flex justify-center">
+            <div className="flex justify-center pt-5">
               <button
-                className="theme-btn"
+                className="border-2 px-8 py-2 text-gray-500"
                 disabled={status === "Sending..."}
               >
                 {status}

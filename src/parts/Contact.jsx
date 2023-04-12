@@ -1,18 +1,17 @@
-import React from 'react'
+import React from "react";import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
-
-	return (
-			<div className="container pt-20">
-				<div className="flex flex-col items-center">
-					<h2 className="text-primary text-6xl md:text-7xl text-center font-bold mb-2 leading-none">Let's Talk</h2>
-					<p className="text-gray-500 font-medium my-5">
-						Feel free to contact us.
-					</p>
-					<a href="/contact" className="theme-btn">Contact Us</a>
-				</div>
-			</div>
-	)
-}
+  return (
+    <div className="container flex flex-col justify-center items-centr pt-20 md:pt-32">
+      <div className="text-center text-5xl md:text-9xl font-bold text-gray-100">
+        Contact
+      </div>
+      <h2 className="pt-20 m-1 text-center text-4xl font-extrabold tracking-tight text-gray-900">
+        Let's <span className="text-gray-100">get in</span> touch
+      </h2>
+      <ContactForm />
+    </div>
+  );
+};
 
 export default Contact;
