@@ -194,35 +194,38 @@ const Services = () => {
               />
             </div>
           </div>
-          <div className="hidden md:block container grid grid-cols-3 p-5 text-center md:gap-y-24 md:p-20">
-            <div className="card col-span-3 md:col-span-1">
-              <div className="service-card">{services[0].name}</div>
-              {services[0].services.map((item, index) => (
-                <p key={index} className="service-card-item  ">
-                  {item}
-                </p>
-              ))}
-            </div>
-            <div></div>
-            <div className="card col-span-3 md:col-span-1">
-              <div className="service-card">{services[1].name}</div>
-              {services[1].services.map((item, index) => (
-                <p key={index} className="service-card-item">
-                  {item}
-                </p>
-              ))}
-            </div>
-            <div />
-            <div className="pt-30 col-span-3 md:col-span-1 xl:pt-52">
-              <div className="service-card">{services[2].name}</div>
-              {services[2].services.map((item, index) => (
-                <p key={index} className="service-card-item">
-                  {item}
-                </p>
-              ))}
+          <div className="hidden md:block">
+            <div className="container grid grid-cols-3 p-5 text-center md:gap-y-24 md:p-20">
+              <div className="card col-span-3 md:col-span-1">
+                <div className="service-card">{services[0].name}</div>
+                {services[0].services.map((item, index) => (
+                  <p key={index} className="service-card-item  ">
+                    {item}
+                  </p>
+                ))}
+              </div>
+              <div></div>
+              <div className="card col-span-3 md:col-span-1">
+                <div className="service-card">{services[1].name}</div>
+                {services[1].services.map((item, index) => (
+                  <p key={index} className="service-card-item">
+                    {item}
+                  </p>
+                ))}
+              </div>
+              <div />
+              <div className="md:pt-30 col-span-3 md:col-span-1 pt-0 2xl:pt-52">
+                <div className="service-card">{services[2].name}</div>
+                {services[2].services.map((item, index) => (
+                  <p key={index} className="service-card-item">
+                    {item}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
-          <Carousel className = "pt-20" showStatus={false}>
+          <div className="md:hidden">
+            <Carousel className="pt-20" infiniteLoop={true} showStatus={false}>
               {services.map((service, index) => {
                 return (
                   <div className="card col-span-3">
@@ -235,7 +238,8 @@ const Services = () => {
                   </div>
                 );
               })}
-          </Carousel>
+            </Carousel>
+          </div>
         </div>
       </div>
     </div>
