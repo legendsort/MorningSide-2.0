@@ -4,12 +4,12 @@ import { team } from "../../constants/team";
 const Team = () => {
   return (
     <div className="flex flex-col mx-auto items-center">
-      <div className="pt-32 container md:pb-20 xl:pb-32">
+      <div className="pt-16 md:pt-32 container md:pb-20 xl:pb-32">
         <div className="w-full mr-20 mx-auto flex flex-col justify-center items-center ">
-          <h1 className="text-black text-3xl lg:text-6xl font-bold mb-5 leading-none text-center w-2/3 mx-auo">
+          <h1 className="text-black text-3xl lg:text-6xl font-bold mb-5 leading-none text-center w-2/3 mx-auo uppercase">
             We bring your ideas to life
           </h1>
-          <h2 className="pt-10 text-black underline text-base lg:text-lg font-bold mb-5 leading-none text-center">
+          <h2 className="pt-10 text-black text-base lg:text-lg font-bold mb-5 leading-none text-center">
             Meet the team
           </h2>
         </div>
