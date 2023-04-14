@@ -117,7 +117,7 @@ class Experience {
 
   resize() {
     this.canvas.width = window.innerWidth;
-    this.canvas.height = window.innerWidth < 768 ? 888 : 777;
+    this.canvas.height = window.innerWidth < 768 ? 777 : 777;
     this.screen = {
       center: { x: this.canvas.width / 2, y: this.canvas.height / 2 },
       hypotenuse: Math.sqrt(

@@ -46,11 +46,11 @@ html {
 	}
 
   .service-card {
-    @apply text-black font-extrabold text-3xl lg:text-6xl mb-6
+    @apply text-black font-extrabold text-xl md:text-2xl lg:text-6xl mb-6
   }
 
   .service-card-item {
-    @apply font-['RobotoRegular'] text-main-color text-base lg:text-2xl
+    @apply font-['RobotoRegular'] text-main-color text-sm md:text-base lg:text-2xl
   }
 
 	.hero {
