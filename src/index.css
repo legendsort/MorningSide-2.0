@@ -2,11 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html {
   scroll-behavior: smooth;
 }
+@font-face {
+  font-family: 'AvenirNextBold';
+  src: local('AvenirNextBold'), url('../public/fonts/AvenirNextCyr-Bold.2dcf23.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'RobotoRegular';
+  src: local('RobotoRegular'), url('../public/fonts/Roboto-Regular.516136.woff') format('woff');
+}
 
 @layer utilities {
+  .hero-title {
+    white-space: nowrap;
+  }
 	.container {
 		width: 100%;
 		height: 100%;
@@ -21,6 +34,7 @@ html {
 	.card {
     margin: 0 auto;
     background-color: #fff;
+    color: black;
     border-radius: 7px;
     margin-top: 20px;
     margin-left: 5px;
@@ -29,9 +43,16 @@ html {
     z-index: 9;
     padding: 40px 30px;
     padding-bottom: 30px;
-    -webkit-box-shadow: 0px 10px 60px 0px rgba(200, 226, 255, 0.45);
-    box-shadow: 0px 10px 60px 0px rgba(200, 226, 255, 0.45);
 	}
+
+  .service-card {
+    @apply text-black font-extrabold text-6xl mb-6
+  }
+
+  .service-card-item {
+    @apply font-['RobotoRegular'] text-main-color text-2xl
+  }
+
 	.hero {
 		@apply bg-cover;
 		padding: 230px 0px 225px;
@@ -89,4 +110,5 @@ html {
     height: 50%;
     z-index: 10;
   }
+  
 }

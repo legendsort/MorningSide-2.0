@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";import Card from "../components/Card";
+import React, { useEffect } from "react";
+import Card from "../components/Card";
 import { services } from "../constants/services";
 
 class Particle {
@@ -55,7 +56,7 @@ class Experience {
     this.then = Date.now();
 
     this.particleEmitters = [];
-    this.radius = 200;
+    this.radius = 150;
 
     for (let i = 0; i < 360; i++) {
       const particleEmitter = new ParticleEmitter(0, this.radius);
@@ -115,9 +116,9 @@ class Experience {
 
   resize() {
     this.canvas.width = window.innerWidth;
-    console.log(window.innerWidth)
+    console.log(window.innerWidth);
 
-    this.canvas.height = window.innerWidth < 768 ? 777 : 444;
+    this.canvas.height = window.innerWidth < 768 ? 777 : 777;
     this.screen = {
       center: { x: this.canvas.width / 2, y: this.canvas.height / 2 },
       hypotenuse: Math.sqrt(
@@ -150,10 +151,10 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="pt-20 mx-auto" id="services">
+    <div className="pt-10 mx-auto" id="services">
       <div className="flex flex-col justify-center items-center">
-        <p className="text-primary uppercase m-5">Our Services</p>
-        <h1 className="text-primary text-4xl md:text-5xl font-bold leading-80 tracking[-0.1875] m-8">
+        <p className="text-primary uppercase m-5 font-light">Our Services</p>
+        <h1 className="text-primary text-4xl md:text-5xl font-bold leading-80 tracking[-0.1875] mt-8">
           What We Do
         </h1>
         <div className="w-full">
@@ -162,34 +163,37 @@ const Services = () => {
               <div id="canvas" className="service-canvas absolute top-0" />
             </div>
           </div>
-          <div className="grid grid-cols-3 md:gap-y-24 p-5 md:p-20">
+          <div className="container grid grid-cols-3 md:gap-y-24 p-5 md:p-20 text-center">
             <div className="card md:col-span-1 col-span-3">
-              <div className="text-primary font-medium text-xl">
+              <div className="service-card">
                 {services[0].name}
               </div>
-              <div className="divider" />
               {services[0].services.map((item, index) => (
-                <p key={index}>{item}</p>
+                <p key={index} className="service-card-item  ">
+                  {item}
+                </p>
               ))}
             </div>
             <div></div>
             <div className="card md:col-span-1 col-span-3">
-              <div className="text-primary font-medium text-xl">
+              <div className="service-card">
                 {services[1].name}
               </div>
-              <div className="divider" />
               {services[1].services.map((item, index) => (
-                <p key={index}>{item}</p>
+                <p key={index} className="service-card-item">
+                  {item}
+                </p>
               ))}
             </div>
             <div />
             <div className="card md:col-span-1 col-span-3">
-              <div className="text-primary font-medium text-xl">
+              <div className="service-card">
                 {services[2].name}
               </div>
-              <div className="divider" />
               {services[2].services.map((item, index) => (
-                <p key={index}>{item}</p>
+                <p key={index} className="service-card-item">
+                  {item}
+                </p>
               ))}
             </div>
           </div>
