@@ -1,11 +1,11 @@
-import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
-import { OrbitControls } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls";
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+
 import { useEffect, useState } from "react";
 const Nova = () => {
   useEffect(() => {
     let isMobile = false;
     if(window.innerWidth < 768) isMobile = true;
-    console.log(isMobile)
     const len = document.querySelectorAll("canvas[data-engine]")?.length;
     if (len > 0) return;
     let scene = new THREE.Scene();

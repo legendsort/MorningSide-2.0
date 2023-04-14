@@ -8,11 +8,11 @@ const About = () => {
       </div>
       <div className="container col-span-3 md:col-span-1">
         <div className="p-3">
-          <p className="my-5 text-lg font-medium uppercase text-green-400">
+          <p className="my-5 text-base lg:text-lg font-medium uppercase text-green-400">
             About Us
           </p>
 
-          <p className="my-5 font-['RobotoRegular'] text-lg font-medium text-sub-color">
+          <p className="my-5 font-['RobotoRegular'] text-base lg:text-lg font-medium text-sub-color">
             MorningSide AI is your full-cycle AI development partner, from
             concept to production and beyond. We're not just machine learning
             specialists, we're the team that helps startups and enterprises
