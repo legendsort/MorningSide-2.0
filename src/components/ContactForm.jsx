@@ -36,7 +36,7 @@ const ContactForm = () => {
           <form
             ref={form}
             action="#"
-            className="space-y-5 text-base md:text-3xl"
+            className="space-y-5 text-base md:text-lg font-['RobotoRegular']"
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col md:flex-row gap-5 ">
@@ -74,7 +74,7 @@ const ContactForm = () => {
             </div>
             <div className="flex justify-center pt-5">
               <button
-                className="border-2 px-8 py-2 text-gray-500"
+                className="border-2 px-10 py-2 text-gray-500"
                 disabled={status === "Sending..."}
               >
                 {status}

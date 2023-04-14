@@ -11,7 +11,7 @@ const Card = (props) => {
             {name}
           </div>
         </div>
-        <div className="my-5 flex items-center justify-center">
+        <div className="my-5 flex items-center justify-center p-10">
           <img className="team" src={photo} alt="logo" />
         </div>
       </div>
