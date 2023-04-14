@@ -31,21 +31,21 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="bg-white dark:bg-gray-900 md:w-[60%] md:mx-auto">
-        <div className="py-8 lg:py-16 px-4 mx-auto full">
+      <div className="bg-white dark:bg-gray-900 lg:mx-auto lg:w-[60%]">
+        <div className="full mx-auto px-4 py-8 lg:py-16">
           <form
             ref={form}
             action="#"
-            className="space-y-5 text-base md:text-lg font-['RobotoRegular']"
+            className="min-w-[250px] space-y-5 font-['RobotoRegular'] text-sm md:text-lg"
             onSubmit={handleSubmit}
           >
-            <div className="flex flex-col md:flex-row gap-5 ">
+            <div className="flex flex-col gap-5 md:flex-row ">
               <div className="border-b border-gray-300 md:w-1/2">
                 <input
                   type="text"
                   id="subject"
                   name="subject"
-                  className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1  leading-tight focus:outline-none"
+                  className="mr-3 w-full appearance-none border-none bg-transparent py-1 leading-tight  text-gray-700 focus:outline-none"
                   placeholder="Subject"
                   required
                 />
@@ -56,7 +56,7 @@ const ContactForm = () => {
                   type="email"
                   id="email"
                   name="email"
-                  className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1  leading-tight focus:outline-none"
+                  className="mr-3 w-full appearance-none border-none bg-transparent py-1 leading-tight  text-gray-700 focus:outline-none"
                   placeholder="Your email"
                   required
                 />
@@ -68,7 +68,7 @@ const ContactForm = () => {
                 id="message"
                 name="message"
                 rows={6}
-                className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1  leading-tight focus:outline-none"
+                className="mr-3 w-full appearance-none border-none bg-transparent py-1 leading-tight  text-gray-700 focus:outline-none"
                 placeholder="How can we help you?"
               ></textarea>
             </div>

@@ -2,17 +2,17 @@ const About = () => {
   const rightImage = "/images/Photos/Website/features.jpeg";
   const leftImage = "/images/avatar.png";
   return (
-    <div className="grid grid-cols-3 container items-center pt-32 text-mainf">
-      <div className="flex justify-center col-span-3 md:col-span-1 p-5 md:p-10">
+    <div className="text-mainf container grid grid-cols-3 items-center pt-10 lg:pt-32">
+      <div className="col-span-3 flex justify-center p-5 md:col-span-1 md:p-10">
         <img src={leftImage} className=" max-h-[300px] " alt="AboutUs" />
       </div>
-      <div className="col-span-3 md:col-span-1 container">
+      <div className="container col-span-3 md:col-span-1">
         <div className="p-3">
-          <p className="font-medium text-lg my-5 uppercase text-green-400">
+          <p className="my-5 text-lg font-medium uppercase text-green-400">
             About Us
           </p>
 
-          <p className="font-medium text-lg my-5 font-['RobotoRegular'] text-sub-color">
+          <p className="my-5 font-['RobotoRegular'] text-lg font-medium text-sub-color">
             MorningSide AI is your full-cycle AI development partner, from
             concept to production and beyond. We're not just machine learning
             specialists, we're the team that helps startups and enterprises
@@ -24,7 +24,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center col-span-3 md:col-span-1 p-5 md:p-10">
+      <div className="col-span-3 flex justify-center p-5 md:col-span-1 md:p-10">
         <img src={rightImage} className="max-h-[300px]" alt="AboutUs" />
       </div>
     </div>

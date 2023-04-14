@@ -57,6 +57,7 @@ class Experience {
 
     this.particleEmitters = [];
     this.radius = 150;
+    if(window.innerWidth < 768) this.radius = 170;
 
     for (let i = 0; i < 360; i++) {
       const particleEmitter = new ParticleEmitter(0, this.radius);
@@ -116,9 +117,7 @@ class Experience {
 
   resize() {
     this.canvas.width = window.innerWidth;
-    console.log(window.innerWidth);
-
-    this.canvas.height = window.innerWidth < 768 ? 777 : 777;
+    this.canvas.height = window.innerWidth < 768 ? 888 : 777;
     this.screen = {
       center: { x: this.canvas.width / 2, y: this.canvas.height / 2 },
       hypotenuse: Math.sqrt(

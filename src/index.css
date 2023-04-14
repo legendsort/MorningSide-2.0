@@ -46,19 +46,16 @@ html {
 	}
 
   .service-card {
-    @apply text-black font-extrabold text-6xl mb-6
+    @apply text-black font-extrabold text-3xl lg:text-6xl mb-6
   }
 
   .service-card-item {
-    @apply font-['RobotoRegular'] text-main-color text-2xl
+    @apply font-['RobotoRegular'] text-main-color text-base lg:text-2xl
   }
 
 	.hero {
 		@apply bg-cover;
-		padding: 230px 0px 225px;
     z-index: 1;
-    position: relative;
-    overflow: hidden;
 	}
 	.hero::before {
 		@apply absolute top-0 left-0 w-full h-full bg-no-repeat;

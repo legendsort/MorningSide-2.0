@@ -2,16 +2,24 @@ const Card = (props) => {
   const { name, photo, role, description, links, style } = props;
   return (
     <div className={`flex pt-10`} id={description}>
-      <div className="p-0 max-w-[1620px] mx-auto flex flex-col justify-center">
+      <div className="mx-auto flex max-w-[1620px] flex-col justify-center p-0">
         <div className="float-right">
-          <div className={`text-[#4277FF] text-3xl font-['RobotoRegular'] uppercase m-2 ${style ? "text-right" : ""}`}>
+          <div
+            className={`m-2 font-['RobotoRegular'] text-base lg:text-3xl uppercase text-[#4277FF] ${
+              style ? "text-right" : ""
+            }`}
+          >
             {role}
           </div>
-          <div className={`text-black font-extrabold text-7xl uppercase m-2 ${style ? "text-right" : ""}`}>
+          <div
+            className={`m-2 text-3xl lg:text-7xl font-extrabold uppercase text-black ${
+              style ? "text-right" : ""
+            }`}
+          >
             {name}
           </div>
         </div>
-        <div className="my-5 flex items-center justify-center p-10">
+        <div className="lg:my-5 flex items-center justify-center lg:p-10">
           <img className="team" src={photo} alt="logo" />
         </div>
       </div>
