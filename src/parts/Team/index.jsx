@@ -15,7 +15,7 @@ const Team = () => {
         </div>
       </div>
       <div className="grid grid-cols-12 w-full">
-        <div className="col-span-12 lg:col-span-11">
+        <div className="col-span-12 ">
           <div className="flex flex-col container md:max-w-[80%]">
             {team.map((member, index) => (
               <MemberCard
@@ -30,7 +30,7 @@ const Team = () => {
             ))}
           </div>
         </div>
-        <div className="hidden md:block pt-10 relative font-['RobotoRegular'] text-base lg:text-lg xl:text-2xl">
+        <div className="hidden pt-10 relative font-['RobotoRegular'] text-base lg:text-lg xl:text-2xl">
           <div className={`text-gray-400 sticky top-8`}>
             <a href="#ceo"> {team[0].name} </a>
           </div>
