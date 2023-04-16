@@ -76,7 +76,7 @@ const initScene = function () {
   });
   renderer.setClearColor(0xffffff, 1.0);
   renderer.autoClearColor = false;
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(window.innerWidth/2, window.innerHeight/2);
   document.getElementById("canvas").appendChild(renderer.domElement);
 
   // My Light
@@ -87,7 +87,7 @@ const initScene = function () {
 
   // My Camera
   camera = new THREE.PerspectiveCamera(
-    70,
+    window.innerWidth >= 768 ? 40 : 70,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
@@ -111,7 +111,7 @@ var init = function () {
   mesh.scale.set(100, 100, 100);
   rotateObject(mesh, -90, -45, -180);
 
-  geometry = createIndexedPlaneGeometry(100, 150);
+  geometry = createIndexedPlaneGeometry(50, 75);
   main(geometry, 1);
 
   material = new THREE.MeshStandardMaterial({
@@ -182,15 +182,12 @@ const Services = () => {
         <p className="m-5 font-['AvenirNextBold'] font-light uppercase">
           Our Services
         </p>
-        <h1 className="leading-80 tracking[-0.1875] mt-8 font-['AvenirNextBold'] text-4xl font-bold md:text-5xl">
-          What We Do
-        </h1>
         <div className="w-full">
-          <div className="relative">
-            <div className="relative flex items-center justify-start">
+          <div className="">
+            <div className="flex items-center justify-center">
               <div
                 id="canvas"
-                className="service-canvas absolute top-0 z-20 hidden md:block"
+                className="service-canvas "
               />
             </div>
           </div>
@@ -204,7 +201,6 @@ const Services = () => {
                   </p>
                 ))}
               </div>
-              <div></div>
               <div className="card col-span-3 md:col-span-1">
                 <div className="service-card">{services[1].name}</div>
                 {services[1].services.map((item, index) => (
@@ -213,8 +209,7 @@ const Services = () => {
                   </p>
                 ))}
               </div>
-              <div />
-              <div className="md:pt-30 col-span-3 md:col-span-1 pt-0 2xl:pt-52">
+              <div className="card col-span-3 md:col-span-1">
                 <div className="service-card">{services[2].name}</div>
                 {services[2].services.map((item, index) => (
                   <p key={index} className="service-card-item">
@@ -222,16 +217,17 @@ const Services = () => {
                   </p>
                 ))}
               </div>
+              <div />
             </div>
           </div>
           <div className="md:hidden">
-            <Carousel className="pt-20" infiniteLoop={true} showStatus={false}>
+            <Carousel className="" infiniteLoop={true} showStatus={false}>
               {services.map((service, index) => {
                 return (
-                  <div className="card col-span-3">
+                  <div className="card col-span-3 mb-10" key={index}>
                     <div className="service-card">{service.name}</div>
                     {service.services.map((item, index) => (
-                      <p key={index} className="service-card-item  ">
+                      <p key={index} className="service-card-item">
                         {item}
                       </p>
                     ))}

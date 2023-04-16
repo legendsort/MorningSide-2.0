@@ -31,7 +31,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="bg-white dark:bg-gray-900 lg:mx-auto lg:w-[60%]">
+      <div className="bg-white lg:mx-auto lg:w-[60%]">
         <div className="full mx-auto px-4 py-8 lg:py-16">
           <form
             ref={form}

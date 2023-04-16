@@ -17,6 +17,16 @@ html {
   src: local('RobotoRegular'), url('../public/fonts/Roboto-Regular.516136.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Kruda';
+  src: local('Kruda'), url('../public/fonts/akufadhl-kruda-wide-slanted.otf') format('otf');
+}
+@font-face {
+  font-family: 'Mont';
+  src: local('Mont'), url('../public/fonts/Montserrat-VariableFont_wght.ttf') format('ttf');
+}
+
+
 @layer utilities {
   .hero-title {
     white-space: nowrap;
@@ -36,18 +46,14 @@ html {
     background-color: #fff;
     color: black;
     border-radius: 7px;
-    margin-top: 20px;
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 30px;
     position: relative;
     z-index: 9;
-    padding: 40px 30px;
-    padding-bottom: 30px;
 	}
 
   .service-card {
-    @apply text-black font-extrabold text-xl md:text-2xl xl:text-6xl mb-6
+    @apply text-black font-extrabold text-lg md:text-2xl xl:text-4xl
   }
 
   .service-card-item {
@@ -85,7 +91,7 @@ html {
     @apply bg-gray-200 w-full pt-2 pb-2 pl-2 hover:bg-gray-400 active:bg-gray-300
   }
   .box-shadow {
-    box-shadow: 0px 10px 60px 0px rgba(200, 226, 255, 0.45);
+    box-shadow: 0px 30px 60px 0px rgba(200, 226, 255, 0.45);
   }
   .inner-shadow {
     box-shadow: inset 0px -2px 10px 0px rgba(200, 226, 255, 0.45);
