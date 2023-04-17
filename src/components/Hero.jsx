@@ -4,8 +4,8 @@ import Nova from "./Nova";
 const Hero = () => {
   return (
     <div className="hero flex h-screen flex-col items-center justify-center lg:mr-44 xl:text-5xl">
-      <div className="absolute">
-        {/* <Nova /> */}
+      <div className="">
+        <Nova />
       </div>
       <div className="mx-5">
         <h1 className="hero-title font-['AvenirNextBold'] text-4xl font-extrabold text-main-color md:text-7xl xl:text-9xl">

@@ -14,13 +14,13 @@ const Services = () => {
         </p>
         <div className="w-full">
           <div className="">
-            <div className="flex items-center justify-center relative mx-auto">
+            <div className="flex items-center justify-center relative w-full">
               <Veba />
             </div>
           </div>
           <div className="hidden md:block">
             <div className="container grid grid-cols-3 p-5 text-center md:gap-y-24 md:p-20 justify-center items-center">
-              <div className="card col-span-3 md:col-span-1">
+              <div className="card col-span-3 md:col-span-1 box-shadow">
                 <div className="service-card">{services[0].name}</div>
                 {services[0].services.map((item, index) => (
                   <p key={index} className="service-card-item  ">
@@ -28,7 +28,7 @@ const Services = () => {
                   </p>
                 ))}
               </div>
-              <div className="card col-span-3 md:col-span-1">
+              <div className="card col-span-3 md:col-span-1 box-shadow">
                 <div className="service-card">{services[1].name}</div>
                 {services[1].services.map((item, index) => (
                   <p key={index} className="service-card-item">
@@ -36,7 +36,7 @@ const Services = () => {
                   </p>
                 ))}
               </div>
-              <div className="card col-span-3 md:col-span-1">
+              <div className="card col-span-3 md:col-span-1 box-shadow">
                 <div className="service-card">{services[2].name}</div>
                 {services[2].services.map((item, index) => (
                   <p key={index} className="service-card-item">
@@ -51,10 +51,10 @@ const Services = () => {
             <Carousel className="" infiniteLoop={true} showStatus={false}>
               {services.map((service, index) => {
                 return (
-                  <div className="card col-span-3 mb-10" key={index}>
-                    <div className="service-card">{service.name}</div>
+                  <div className="card col-span-3 mb-10 " key={index}>
+                    <div className="service-card ">{service.name}</div>
                     {service.services.map((item, index) => (
-                      <p key={index} className="service-card-item">
+                      <p key={index} className="service-card-item ">
                         {item}
                       </p>
                     ))}

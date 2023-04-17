@@ -1,8 +1,8 @@
 const About = () => {
   return (
     <div className="flex h-screen items-center bg-[#1f1f1f]">
-      <div className="ml-[20%] max-w-[950px]">
-        <p className=" text-8xl text-white">
+      <div className="ml-[10%] lg:ml-[20%] max-w-[950px]">
+        <p className="text-4xl md:text-6xl xl:text-8xl text-white">
           <article class="TextForRender__root__2inMJ TextForRender__HORIZONTAL-en-text__pcK8Y">
             <div class="renred-row-en-HORIZONTAL">
               <span class="fade-out-00 ">

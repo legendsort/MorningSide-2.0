@@ -16,7 +16,7 @@ const About = () => {
       {/* <div className="p-2 mr-5 box-shadow" >
         <img src={leftImage} id="image" className="h-auto" alt="AboutUs" />
       </div> */}
-      <div id="paragraph" className="w-full md:max-w-[300px] lg:max-w-[800px]">
+      <div id="paragraph" className="w-full md:max-w-[600px] lg:max-w-[800px]">
         <div className="p-3">
           <p className="text-base text-center font-medium uppercase text-blue-400 lg:text-lg font-['RobotoRegular']">
             About Us
