@@ -46,14 +46,14 @@ const Nova = () => {
         Math.random() * 0.9 + 0.1
       );
     };
-    let pts = new Array(isMobile ? 1000 : 5000).fill().map((p) => {
+    let pts = new Array(isMobile ? 3000 : 5000).fill().map((p) => {
       sizes.push(Math.random() * 1.5 + 0.5);
       pushShift();
       return new THREE.Vector3()
         .randomDirection()
         .multiplyScalar(Math.random() * 0.5 + 5.5);
     });
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 1000; i++) {
       let r = 5,
         R = 10;
       let rand = Math.pow(Math.random(), 1.5);

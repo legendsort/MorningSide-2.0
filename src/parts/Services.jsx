@@ -1,7 +1,7 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { services } from "../constants/services";
-import Nova from "../components/Nova";
+import Veba from "../components/Veba";
 
 
 const Services = () => {
@@ -15,7 +15,7 @@ const Services = () => {
         <div className="w-full">
           <div className="">
             <div className="flex items-center justify-center relative mx-auto">
-              <Nova />
+              <Veba />
             </div>
           </div>
           <div className="hidden md:block">

@@ -13,6 +13,11 @@ html {
 }
 
 @font-face {
+  font-family: 'AvenirNextLight';
+  src:  url('../public/fonts/AvenirNextCyr-Demi.fe6d74.woff') format('woff');
+}
+
+@font-face {
   font-family: 'RobotoRegular';
   src: local('RobotoRegular'), url('../public/fonts/Roboto-Regular.516136.woff') format('woff');
 }
@@ -53,11 +58,11 @@ html {
 	}
 
   .service-card {
-    @apply text-black font-extrabold text-center text-lg lg:text-2xl xl:text-4xl pb-8 md:max-w-[160px] lg:max-w-[220px] xl:max-w-[330px] mx-auto
+    @apply text-black font-extrabold text-center text-lg lg:text-xl xl:text-2xl pb-8 md:max-w-[160px] lg:max-w-[180px] xl:max-w-[230px] mx-auto
   }
 
   .service-card-item {
-    @apply font-['RobotoRegular'] text-main-color text-sm md:text-base lg:text-2xl
+    @apply font-['RobotoRegular'] text-base font-medium text-sub-color lg:text-lg 
   }
 
 	.hero {
@@ -110,7 +115,7 @@ html {
     height: 50%;
     z-index: 10;
   }
-  #veba {
+  /* #veba {
     position: absolute;
     top: 0;
     left: 100;
@@ -118,11 +123,6 @@ html {
     height: 100%;
     z-index: -1;
   }
-  .nova {
-    width: 100%;
-    height: 50%;
-    
-    overflow: hidden;
-  }
+  */
   
 }

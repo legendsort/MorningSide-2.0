@@ -73,7 +73,7 @@ const initScene = function () {
   });
   renderer.setClearColor(0xffffff, 1.0);
   renderer.autoClearColor = false;
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(window.innerWidth/2, window.innerHeight/2);
   document.getElementById("canvas").appendChild(renderer.domElement);
 
   // My Light
@@ -84,7 +84,7 @@ const initScene = function () {
 
   // My Camera
   camera = new THREE.PerspectiveCamera(
-    window.innerWidth >= 768 ? 60 : 100,
+    window.innerWidth >= 768 ? 40 : 50,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
@@ -108,7 +108,7 @@ var init = function () {
   mesh.scale.set(100, 100, 100);
   rotateObject(mesh, -90, -45, -180);
 
-  geometry = createIndexedPlaneGeometry(8, 12);
+  geometry = createIndexedPlaneGeometry(50, 75);
   main(geometry, 1);
 
   material = new THREE.MeshStandardMaterial({
@@ -161,6 +161,7 @@ var animate = function () {
 
   renderer.render(scene, camera);
 };
+
 
 const Veba = () => {
   useEffect(() => {
