@@ -9,7 +9,7 @@ const Nova = () => {
     const len = document.querySelectorAll("canvas[data-engine]")?.length;
     if (len > 0) return;
     let scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xffffff);
+    scene.background = new THREE.Color(0xf7f7f7);
     let camera = new THREE.PerspectiveCamera(
       50,
       window.innerWidth / window.innerHeight,
@@ -18,19 +18,20 @@ const Nova = () => {
     );
     camera.position.set(0, 2, 30);
     let renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth-20, window.innerHeight);
+    if(isMobile) renderer.setSize(window.innerWidth-20, window.innerHeight);
+    else renderer.setSize(window.innerWidth-20, window.innerHeight);
     const novaDiv = document.getElementById("nova");
     novaDiv.appendChild(renderer.domElement);
     window.addEventListener("resize", (event) => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(window.innerWidth-20, window.innerHeight);
     });
 
     let controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.enablePan = false;
-
+    controls.enableZoom = false;
     let gu = {
       time: { value: 0 },
     };

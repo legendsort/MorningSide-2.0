@@ -14,7 +14,7 @@ const Services = () => {
         </p>
         <div className="w-full">
           <div className="">
-            <div className="flex items-center justify-center relative w-full">
+            <div className="flex items-center justify-center w-full">
               <Veba />
             </div>
           </div>

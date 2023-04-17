@@ -113,8 +113,6 @@ html {
   }
 
   .service-canvas {
-    width: 50%;
-    height: 50%;
     z-index: 10;
   }
 
@@ -126,7 +124,7 @@ html {
 
   .fade-out-05 {
     opacity: 0;
-    animation: fadeOut 1s;
+    animation: turn 4.25s;
     -webkit-animation-fill-mode: forwards;
     animation-delay: 0.5s;
   }
@@ -154,7 +152,7 @@ html {
   
   .fade-out-15 {
     opacity: 0;
-    animation: turn 3.25s;
+    animation: fadeOut 1s;
     -webkit-animation-fill-mode: forwards;
     animation-delay: 1.5s;
   }
@@ -180,48 +178,6 @@ html {
     animation-delay: 2.75s;
   }
 
-  .fade-out-30 {
-    opacity: 0;
-    opacity: 0;
-    animation: fadeOut 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-delay: 3.0s;
-  }
-  
-  .fade-out-31 {
-    opacity: 0;
-    animation: fadeOut 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-delay: 3.1s;
-  }
-
-  .fade-out-32 {
-    opacity: 0;
-    animation: fadeOut 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-delay: 3.2s;
-  }
-
-  .fade-out-33 {
-    opacity: 0;
-    animation: fadeOut 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-delay: 3.3s;
-  }
-  
-  .fade-out-38 {
-    opacity: 0;
-    animation: fadeOut 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-delay: 3.8s;
-  }
-
-  .fade-out-40 {
-    opacity: 0;
-    animation: fadeOut 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-delay: 4s;
-  }
 
   @keyframes turn {
     0%   {color:white; opacity: 0;}
@@ -246,7 +202,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -10;
   }
   
 }

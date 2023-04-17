@@ -84,7 +84,7 @@ const initScene = function () {
 
   // My Camera
   camera = new THREE.PerspectiveCamera(
-    window.innerWidth >= 768 ? 40 : 60,
+    window.innerWidth >= 768 ? 40 : 70,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
