@@ -3,22 +3,22 @@ import { useEffect } from "react";
 const About = () => {
   const leftImage = "/images/avatar.png";
 
-  useEffect(() => {
-    const image = document.getElementById("image");
-    const paragraph = document.getElementById("paragraph");
+  // useEffect(() => {
+  //   const image = document.getElementById("image");
+  //   const paragraph = document.getElementById("paragraph");
   
-    // Set initial height of image to match paragraph
-    image.style.height = `${paragraph.offsetHeight}px`;
+  //   // Set initial height of image to match paragraph
+  //   image.style.height = `${paragraph.offsetHeight}px`;
 
-  });
+  // });
   return (
     <div className="text-mainf container flex flex-col md:flex-row items-center justify-center pt-10 lg:pt-32">
-      <div className="p-2 mr-5 box-shadow" >
+      {/* <div className="p-2 mr-5 box-shadow" >
         <img src={leftImage} id="image" className="h-auto" alt="AboutUs" />
-      </div>
-      <div id="paragraph" className="w-full md:max-w-[300px] lg:max-w-[600px]">
+      </div> */}
+      <div id="paragraph" className="w-full md:max-w-[300px] lg:max-w-[800px]">
         <div className="p-3">
-          <p className="text-base font-medium uppercase text-blue-400 lg:text-lg font-['Kruda']">
+          <p className="text-base font-medium uppercase text-blue-400 lg:text-lg font-['RobotoRegular']">
             About Us
           </p>
 

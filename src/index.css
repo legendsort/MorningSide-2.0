@@ -43,17 +43,17 @@ html {
     @apply border border-solid border-gray-400 my-2;
   }
 	.card {
-    background-color: #fff;
     color: black;
     border-radius: 7px;
     margin-left: 5px;
     margin-right: 5px;
     position: relative;
     z-index: 9;
+    padding-top: 20px;
 	}
 
   .service-card {
-    @apply text-black font-extrabold text-lg md:text-2xl xl:text-4xl
+    @apply text-black font-extrabold text-center text-lg lg:text-2xl xl:text-4xl pb-8 md:max-w-[160px] lg:max-w-[220px] xl:max-w-[330px] mx-auto
   }
 
   .service-card-item {

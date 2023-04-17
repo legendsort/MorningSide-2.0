@@ -177,9 +177,9 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="mx-auto pt-10" id="services">
+    <div className="mx-auto pt-20 md:pt-44" id="services">
       <div className="flex flex-col items-center justify-center">
-        <p className="m-5 font-['AvenirNextBold'] font-light uppercase">
+        <p className="md:m-10 font-['AvenirNextBold'] font-light uppercase">
           Our Services
         </p>
         <div className="w-full">
@@ -192,7 +192,7 @@ const Services = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="container grid grid-cols-3 p-5 text-center md:gap-y-24 md:p-20">
+            <div className="container grid grid-cols-3 p-5 text-center md:gap-y-24 md:p-20 justify-center items-center">
               <div className="card col-span-3 md:col-span-1">
                 <div className="service-card">{services[0].name}</div>
                 {services[0].services.map((item, index) => (

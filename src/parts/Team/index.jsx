@@ -4,9 +4,9 @@ import { team } from "../../constants/team";
 
 const Team = () => {
   return (
-    <div className="mx-auto flex flex-col items-center">
-      <div className="container pt-16 md:pb-20 md:pt-32 xl:pb-32">
-        <div className="flex h-screen flex-col items-center justify-center text-center text-5xl font-bold text-gray-100 md:text-9xl">
+    <div className="mx-auto flex flex-col items-center justify-center">
+      <div className="container p-20">
+        <div className="flex h-[220px] lg:h-[350px] flex-col items-center justify-center text-center text-5xl font-bold text-gray-100 md:text-9xl">
           <div>Meet the team</div>
         </div>
       </div>
@@ -22,6 +22,7 @@ const Team = () => {
                 description={member.description}
                 links={member.links}
                 style={index % 2}
+                mphoto={member.mphoto}
               />
             ))}
           </div>

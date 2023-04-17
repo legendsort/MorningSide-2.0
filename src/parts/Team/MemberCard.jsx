@@ -1,5 +1,5 @@
 const Card = (props) => {
-  const { name, photo, role, description, links, style } = props;
+  const { name, photo, role, description, mphoto, style } = props;
   return (
     <div className={`flex pt-10`} id={description}>
       <div className="mx-auto flex max-w-[1620px] flex-col justify-center p-0">
@@ -20,7 +20,9 @@ const Card = (props) => {
           </div>
         </div>
         <div className="lg:my-5 flex items-center justify-center lg:p-10">
-          <img className="team" src={photo} alt="logo" />
+          <img className="hidden md:block team" src={photo} alt="team" />
+          <img className="md:hidden team" src={mphoto} alt="team" />
+
         </div>
       </div>
     </div>

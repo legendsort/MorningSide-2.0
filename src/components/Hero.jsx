@@ -9,7 +9,7 @@ const Hero = () => {
         <h1 className="hero-title font-['AvenirNextBold'] text-4xl font-extrabold text-main-color md:text-7xl xl:text-9xl">
           Morningside AI
         </h1>
-        <p className="mt-2 w-2/3 font-['RobotoRegular'] text-base text-sub-color lg:text-lg xl:mt-10 font-semibold">
+        <p className="mt-2 w-2/3 font-['AvenirNextBold'] text-sm text-main-color lg:text-3xl xl:mt-10 font-light">
           Empower Your Business with Cutting-Edge AI Solutions
         </p>
       </div>
