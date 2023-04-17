@@ -4,10 +4,10 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { useEffect, useState } from "react";
 const Nova = () => {
   useEffect(() => {
+    const len = document.querySelectorAll("#nova canvas")?.length;
+    if (len > 0) return;
     let isMobile = false;
     if(window.innerWidth < 768) isMobile = true;
-    const len = document.querySelectorAll("canvas[data-engine]")?.length;
-    if (len > 0) return;
     let scene = new THREE.Scene();
     scene.background = new THREE.Color(0xffffff);
     let camera = new THREE.PerspectiveCamera(
@@ -16,20 +16,21 @@ const Nova = () => {
       1,
       1000
     );
-    camera.position.set(0, 5, 30);
+    camera.position.set(0, 5, 15);
     let renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth/2, window.innerHeight/2);
     const novaDiv = document.getElementById("nova");
     novaDiv.appendChild(renderer.domElement);
     window.addEventListener("resize", (event) => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(window.innerWidth/2, window.innerHeight/2);
     });
 
     let controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.enablePan = false;
+    controls.enableZoom = false; // add this line to disable zooming
 
     let gu = {
       time: { value: 0 },
@@ -50,11 +51,11 @@ const Nova = () => {
       pushShift();
       return new THREE.Vector3()
         .randomDirection()
-        .multiplyScalar(Math.random() * 0.5 + 9.5);
+        .multiplyScalar(Math.random() * 0.5 + 5.5);
     });
-    for (let i = 0; i < 1000; i++) {
-      let r = 10,
-        R = 20;
+    for (let i = 0; i < 500; i++) {
+      let r = 5,
+        R = 10;
       let rand = Math.pow(Math.random(), 1.5);
       let radius = Math.sqrt(R * R * rand + (1 - rand) * r * r);
       pts.push(
@@ -137,6 +138,6 @@ const Nova = () => {
     });
   }, []);
 
-  return <div id="nova" className="nova"></div>;
+  return <div id="nova" className="flex justify-center nova" />;
 };
 export default Nova;

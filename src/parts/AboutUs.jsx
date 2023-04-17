@@ -12,17 +12,17 @@ const About = () => {
 
   // });
   return (
-    <div className="text-mainf container flex flex-col md:flex-row items-center justify-center pt-10 lg:pt-32">
+    <div className="text-mainf container flex flex-col md:flex-row items-center text-center justify-center pt-10 lg:pt-32">
       {/* <div className="p-2 mr-5 box-shadow" >
         <img src={leftImage} id="image" className="h-auto" alt="AboutUs" />
       </div> */}
       <div id="paragraph" className="w-full md:max-w-[300px] lg:max-w-[800px]">
         <div className="p-3">
-          <p className="text-base font-medium uppercase text-blue-400 lg:text-lg font-['RobotoRegular']">
+          <p className="text-lg uppercase text-blue-400 lg:text-xl font-['AvenirNextBold']">
             About Us
           </p>
 
-          <p className="my-5  text-justify font-['RobotoRegular'] text-base font-medium text-sub-color lg:text-lg ">
+          <p className="service-card-item pt-10">
             MorningSide AI is your full-cycle AI development partner, from
             concept to production and beyond. We're not just machine learning
             specialists, we're the team that helps startups and enterprises
