@@ -16,8 +16,8 @@ const LandingPage = () => {
   return (
     <div>
       <Hero />
-      <About />
       <AboutUs />
+      <About />
       <Services />
       <Team />
       <Contact />
