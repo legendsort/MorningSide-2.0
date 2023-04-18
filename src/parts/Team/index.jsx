@@ -7,7 +7,7 @@ const Team = () => {
     <div className="mx-auto flex flex-col items-center justify-center">
       <div className="container p-20 flex items-center justify-center">
         <div className="h-[170px] lg:h-[450px]  text-center text-5xl font-bold text-gray-100 md:text-9xl">
-          <div>Meet the team</div>
+          <div>Meet The Team</div>
         </div>
       </div>
       <div className="grid w-full grid-cols-12">

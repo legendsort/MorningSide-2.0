@@ -178,6 +178,20 @@ html {
     animation-delay: 2.75s;
   }
 
+  
+  .fade-out-30 {
+    opacity: 0;
+    animation: fadeOut 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 3s;
+  }
+  
+  .fade-out-32 {
+    opacity: 0;
+    animation: fadeOut 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 3.25s;
+  }
 
   @keyframes turn {
     0%   {color:white; opacity: 0;}
