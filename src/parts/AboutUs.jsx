@@ -12,7 +12,7 @@ const About = () => {
 
   // });
   return (
-    <div className="text-mainf container flex flex-col md:flex-row items-center justify-center pt-10 lg:pt-32">
+    <div className="text-mainf container flex flex-col md:flex-row items-center justify-center pt-10 lg:py-32 py-10">
       {/* <div className="p-2 mr-5 box-shadow" >
         <img src={leftImage} id="image" className="h-auto" alt="AboutUs" />
       </div> */}

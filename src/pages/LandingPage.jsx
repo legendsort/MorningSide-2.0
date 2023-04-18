@@ -7,12 +7,17 @@ import Team from "../parts/Team";
 import Blog from "../parts/Blog";
 import Contact from "../parts/Contact";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const LandingPage = () => {
+  Aos.init();
+
   return (
     <div>
       <Hero />
-      <About />
       <AboutUs />
+      <About />
       <Services />
       <Team />
       <Contact />
