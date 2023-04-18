@@ -1,8 +1,8 @@
 const About = () => {
   return (
     <div className="flex h-screen items-center bg-[#1f1f1f]">
-      <div className="ml-[8%] max-w-[950px] xl:ml-[20%]">
-        <div className="text-4xl text-white md:text-6xl xl:text-7xl">
+      <div className="mr-[4%] ml-[8%] max-w-[950px] xl:ml-[20%]">
+        <div className="text-3xl text-white md:text-6xl xl:text-7xl">
           <article className="TextForRender__root__2inMJ TextForRender__HORIZONTAL-en-text__pcK8Y">
             <div className="renred-row-en-HORIZONTAL">
               <span className="fade-out-00 ">Leverage </span>
