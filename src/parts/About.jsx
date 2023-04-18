@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className="flex h-screen items-center bg-[#1f1f1f]">
-      <div className="ml-[10%] max-w-[950px] lg:ml-[20%]">
+      <div className="ml-[8%] max-w-[950px] lg:ml-[20%]">
         <div className="text-4xl text-white md:text-6xl xl:text-8xl">
           <article className="TextForRender__root__2inMJ TextForRender__HORIZONTAL-en-text__pcK8Y">
             <div className="renred-row-en-HORIZONTAL">

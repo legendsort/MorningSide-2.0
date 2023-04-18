@@ -5,8 +5,8 @@ import { team } from "../../constants/team";
 const Team = () => {
   return (
     <div className="mx-auto flex flex-col items-center justify-center">
-      <div className="container p-20">
-        <div className="flex h-[220px] lg:h-[350px] flex-col items-center justify-center text-center text-5xl font-bold text-gray-100 md:text-9xl">
+      <div className="container p-20 flex items-center justify-center">
+        <div className="h-[170px] lg:h-[450px]  text-center text-5xl font-bold text-gray-100 md:text-9xl">
           <div>Meet the team</div>
         </div>
       </div>

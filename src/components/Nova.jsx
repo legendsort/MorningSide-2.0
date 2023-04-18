@@ -18,14 +18,15 @@ const Nova = () => {
     );
     camera.position.set(0, 2, 30);
     let renderer = new THREE.WebGLRenderer();
-    if(isMobile) renderer.setSize(window.innerWidth-20, window.innerHeight);
-    else renderer.setSize(window.innerWidth-20, window.innerHeight);
+    if(isMobile) renderer.setSize(window.innerWidth, window.innerHeight);
+    else renderer.setSize(window.innerWidth, window.innerHeight);
     const novaDiv = document.getElementById("nova");
     novaDiv.appendChild(renderer.domElement);
     window.addEventListener("resize", (event) => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth-20, window.innerHeight);
+      if(isMobile) renderer.setSize(window.innerWidth, window.innerHeight);
+      else renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
     let controls = new OrbitControls(camera, renderer.domElement);

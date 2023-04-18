@@ -23,7 +23,7 @@ const About = () => {
           </p>
 
           <p className="my-5  text-center font-['RobotoRegular'] text-base font-medium text-sub-color lg:text-lg ">
-            MorningSide AI is your full-cycle AI development partner, from
+            Morningside AI is your full-cycle AI development partner, from
             concept to production and beyond. We're not just machine learning
             specialists, we're the team that helps startups and enterprises
             create cutting-edge AI products that optimize efficiency and
