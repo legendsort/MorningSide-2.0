@@ -9,15 +9,15 @@ const Hero = () => {
         </div>
         <div className="mx-5">
           <h1
-            data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos="zoom-in"
+            data-aos-delay="200"
             className="hero-title font-['AvenirNextBold'] text-4xl font-extrabold text-main-color md:text-7xl xl:text-9xl"
           >
             Morningside AI
           </h1>
           <p
-            data-aos="fade-down"
-            data-aos-delay="300"
+            data-aos="zoom-in"
+            data-aos-delay="200"
             className="mt-2 w-2/3 font-['AvenirNextLight'] text-sm font-light text-main-color lg:text-3xl xl:mt-10"
           >
             Empower Your Business with Cutting-Edge AI Solutions
