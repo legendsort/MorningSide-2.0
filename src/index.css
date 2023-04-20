@@ -6,36 +6,43 @@
 html {
   scroll-behavior: smooth;
 }
+
 @font-face {
-  font-family: 'AvenirNextBold';
-  src: local('AvenirNextBold'), url('../public/fonts/AvenirNextCyr-Bold.2dcf23.woff') format('woff');
-  color: '#353535';
+  font-family: 'SpaceGrotesk';
+  src: local('SpaceGrotesk'), url('../public/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'AvenirNextLight';
-  src:  url('../public/fonts/AvenirNextCyr-Demi.fe6d74.woff') format('woff');
+  font-family: 'Inter';
+  src: local('Inter'), url('../public/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
 }
-
-@font-face {
-  font-family: 'RobotoRegular';
-  src: local('RobotoRegular'), url('../public/fonts/Roboto-Regular.516136.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Kruda';
-  src: local('Kruda'), url('../public/fonts/akufadhl-kruda-wide-slanted.otf') format('otf');
-}
-@font-face {
-  font-family: 'Mont';
-  src: local('Mont'), url('../public/fonts/Montserrat-VariableFont_wght.ttf') format('ttf');
-}
-
 
 @layer utilities {
   .hero-title {
     white-space: nowrap;
   }
+  .title {
+    @apply text-lg md:text-2xl text-orange-color font-bold text-center uppercase mb-6
+  }
+
+  .btn {
+    @apply font-medium px-4 py-1.5 md:px-8 md:py-3 text-sm md:text-base;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .border-btn {
+    border-width: 1px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  }
+  .orange-btn {
+    @apply bg-orange-color text-white;
+  }
+
+  .normal-btn {
+    @apply bg-white text-main-color border-main-color ;
+  }
+
 	.container {
 		width: 100%;
 		height: 100%;
@@ -44,27 +51,25 @@ html {
     margin-right: auto;
     margin-left: auto;
 	}
+
+  .line-h {
+    line-height: 35px;
+  }
+
   .divider {
     @apply border border-solid border-gray-400 my-2;
   }
+
 	.card {
-    color: black;
-    /* border-width: 2px; */
-    border-radius: 7px;
-    margin-left: 5px;
-    margin-right: 5px;
-    position: relative;
-    z-index: 9;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    border: 1px solid #D2D6DB;
+    box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.1), 0px 1px 4px -2px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
 	}
-
   .service-card {
-    @apply text-black font-extrabold text-center text-lg lg:text-xl xl:text-2xl pb-8 md:max-w-[160px] lg:max-w-[180px] xl:max-w-[230px] mx-auto
-  }
-
+    @apply font-['SpaceGrotesk'] font-bold text-2xl max-w-[220px] mx-auto mb-4
+   }
   .service-card-item {
-    @apply font-['RobotoRegular'] text-base font-medium text-sub-color lg:text-lg 
+    @apply font-['Inter'] text-base text-[#4D5761]
   }
 
 	.hero {
@@ -124,71 +129,71 @@ html {
 
   .fade-out-1 {
     opacity: 0;
-    animation: turn 4.25s;
+    animation: fadeOut 1s;
     -webkit-animation-fill-mode: forwards;
-    animation-delay: 0.5s;
+    animation-delay: 0.25s;
   }
   
   .fade-out-2 {
     opacity: 0;
-    animation: turn 4s;
+    animation: fadeOut 1s;
     -webkit-animation-fill-mode: forwards;
-    animation-delay: 0.75s;
+    animation-delay: 0.5s;
   }
 
   .fade-out-3 {
     opacity: 0;
-    animation: turn 3.75s;
+    animation: turn 2.75s;
     -webkit-animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 0.75s;
   }
 
   .fade-out-4 {
     opacity: 0;
-    animation: turn 3.55s;
+    animation: turn 2.75s;
     -webkit-animation-fill-mode: forwards;
-    animation-delay: 1.2s;
+    animation-delay: 1s;
   }
   
   .fade-out-5 {
     opacity: 0;
     animation: fadeOut 1s;
     -webkit-animation-fill-mode: forwards;
-    animation-delay: 1.5s;
+    animation-delay: 1.25s;
   }
 
   .fade-out-6 {
     opacity: 0;
     animation: fadeOut 1s;
     -webkit-animation-fill-mode: forwards;
-    animation-delay: 1.75s;
+    animation-delay: 1.5s;
   }
 
   .fade-out-7 {
     opacity: 0;
     animation: fadeOut 1s;
     -webkit-animation-fill-mode: forwards;
-    animation-delay: 2.25s;
+    animation-delay: 1.75s;
   }
   
   .fade-out-8 {
     opacity: 0;
     animation: fadeOut 1s;
     -webkit-animation-fill-mode: forwards;
-    animation-delay: 2.75s;
+    animation-delay: 2s;
   }
   .fade-out-9 {
     opacity: 0;
     animation: fadeOut 1s;
     -webkit-animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 2.25s;
   }
   
   .fade-out-10 {
     opacity: 0;
     animation: fadeOut 1s;
     -webkit-animation-fill-mode: forwards;
-    animation-delay: 3.25s;
+    animation-delay: 2.5s;
   }
 
   .square {
@@ -199,7 +204,7 @@ html {
     0%   {color:white; opacity: 0;}
     25%  {color:white; opacity: 1;}
     75%  {color:white; opacity: 1;}
-    100% {color:black; opacity: 1;}
+    100% {color:#FF8A00; opacity: 1;}
   }
 
   @keyframes fadeOut {

@@ -1,29 +1,15 @@
 const Card = (props) => {
-  const { name, photo, role, description, mphoto, style } = props;
+  const { name, photo, role } = props;
   return (
-    <div className={`flex pt-10`} id={description}>
-      <div className="mx-auto flex max-w-[1620px] flex-col justify-center p-0">
-        <div className="float-right">
-          <div
-            className={`m-2 font-['RobotoRegular'] text-base lg:text-3xl uppercase text-[#4277FF] ${
-              style ? "text-right" : ""
-            }`}
-          >
-            {role}
-          </div>
-          <div
-            className={`m-2 text-3xl lg:text-7xl font-extrabold uppercase text-black ${
-              style ? "text-right" : ""
-            }`}
-          >
-            {name}
-          </div>
-        </div>
-        <div className="lg:my-5 flex items-center justify-center lg:p-10">
-          <img className="hidden md:block team" src={photo} alt="team" />
-          <img className="md:hidden team" src={mphoto} alt="team" />
-
-        </div>
+    <div className="border-r-3 w-[406px]">
+      <div className="bg-orange-color p-12 rounded-[30px] flex justify-center">
+        <img className=" team max-h-[356px]" src={photo} alt="logo" />
+      </div>
+      <div className="pt-5 font-['SpaceGrotesk'] text-[32px] font-bold uppercase text-main-color">
+        {name}
+      </div>
+      <div className="font-['Iter'] text-lg uppercase text-orange-color">
+        {role}
       </div>
     </div>
   );

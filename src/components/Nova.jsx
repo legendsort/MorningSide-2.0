@@ -47,7 +47,7 @@ const Nova = () => {
         Math.random() * 0.9 + 0.1
       );
     };
-    let pts = new Array(isMobile ? 3000 : 5000).fill().map((p) => {
+    let pts = new Array(isMobile ? 2000 : 5000).fill().map((p) => {
       sizes.push(Math.random() * 1.5 + 0.5);
       pushShift();
       return new THREE.Vector3()

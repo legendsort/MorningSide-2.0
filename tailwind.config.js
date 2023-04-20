@@ -3,16 +3,14 @@
   theme: {
     extend: {
       colors: {
-        "main-color": "#353535",
+        "main-color": "#1A1A1A",
         "sub-color": "#6a6a6a",
+        "orange-color": "#FF8A00"
       },
       fontFamily: {
         sans: [
-          "AvenirNextBold",
-          "RobotoRegular",
-          "Helvetica",
-          "Arial",
-          "sans-serif",
+          "SpaceGrotesk",
+          "Inter",
         ],
       },
       screens: {
