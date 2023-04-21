@@ -8,11 +8,18 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("Sending...");
+    const formData = new FormData(form.current);
+    const data = {
+      subject: formData.get("subject"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+      budget: formData.get("budget")
+    };
     emailjs
-      .sendForm(
-        "service_4lc63o8",
-        "template_upd8p7b",
-        form.current,
+      .send(
+        "service_839tvkd",
+        "template_wsj7vpd",
+        data,
         "WpcdHKXte2Drc_Q_u"
       )
       .then(
@@ -81,7 +88,8 @@ const ContactForm = () => {
               <div className="text-gray-400">
                 <select
                   className="block w-full appearance-none border-b border-gray-200 pt-3 pr-8 leading-tight focus:outline-none"
-                  id="grid-state"
+                  id="budget"
+                  name="budget"
                 >
                   <option value = "less than $5,000"> less than $5,000 </option>
                   <option value = "$5,000 - $10,000">$5,000 - $10,000</option>
