@@ -1,6 +1,6 @@
 export const services = [
   {
-    name: "GPT-3 Development",
+    name: "GPT-3 | GPT 4 Development",
     services: [
       "Text generation",
       "Question answering",

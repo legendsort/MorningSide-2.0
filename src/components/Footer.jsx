@@ -16,13 +16,10 @@ import React from "react";const Footer = () => {
                 Join our newsletter
               </h3>
               <div className="flex flex-row gap-x-3 pb-6">
-                <input
-                  placeholder="Email address"
-                  className="email-input rounded-1 border-black p-[13px] w-[241px] md:w-[341px]"
-                />
+
                 <input
                   type="button"
-                  className="btn normal-btn border-btn"
+                  className="btn orange-btn border-btn"
                   value="Subscribe"
                 />
               </div>

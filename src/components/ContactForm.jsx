@@ -30,12 +30,12 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="bg-white lg:mx-auto lg:w-[50%]">
+      <div className="bg-white lg:mx-auto lg:w-[50%] text-gray-400">
         <div className="full mx-auto px-4 py-8 lg:py-16">
           <form
             ref={form}
             action="#"
-            className="min-w-[250px] space-y-5 font-['Inter'] text-base text-main-color md:text-lg "
+            className="min-w-[250px] space-y-5 font-['Inter'] text-base text-gray-400 md:text-lg "
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col gap-5 pb-5 md:flex-row">
@@ -78,7 +78,7 @@ const ContactForm = () => {
               >
                 What is you budget for this project
               </label>
-              <div className="">
+              <div className="text-gray-400">
                 <select
                   className="block w-full appearance-none border-b border-gray-200 pt-3 pr-8 leading-tight focus:outline-none"
                   id="grid-state"

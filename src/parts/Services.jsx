@@ -15,10 +15,10 @@ const Services = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="grid grid-cols-3 items-center justify-center text-center gap-x-8">
+            <div className="grid grid-cols-3 items-center justify-center text-center mx-auto">
               {services.map((service, index) => {
                 return (
-                  <div key={index} className="col-span-3 md:col-span-1 max-w-[384px] card px-4 py-8">
+                  <div key={index} className="col-span-3 md:col-span-1 card px-4 py-8 mx-10">
                     <div className="service-card">{service.name}</div>
                     {service.services.map((item, index) => (
                       <p key={index} className="service-card-item">

@@ -22,13 +22,13 @@ const Hero = () => {
             Empower Your Business with Cutting-Edge AI Solutions
           </p>
           <div className="flex gap-x-3 pt-5  font-['Inter']">
-            <Link to="#">
+            <a href="#contact">
               <input
                 type="button"
                 className="btn orange-btn"
                 value="Let's talk"
               />
-            </Link>
+            </a>
             <a href="#services">
               <input
                 type="button"

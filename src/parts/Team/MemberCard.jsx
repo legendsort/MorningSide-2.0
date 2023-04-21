@@ -8,7 +8,7 @@ const Card = (props) => {
       <div className="pt-5 font-['SpaceGrotesk'] text-[32px] font-bold uppercase text-main-color text-center md:text-left">
         {name}
       </div>
-      <div className="font-['Iter'] text-lg uppercase text-orange-color text-center md:text-left">
+      <div className="font-['Inter'] text-lg uppercase text-orange-color text-center md:text-left">
         {role}
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
   return (
-    <div className="container flex flex-col items-center justify-center pt-20 md:pt-32">
+    <div id="contact" className="container flex flex-col items-center justify-center pt-20 md:pt-32">
       <h2 className="title ">
         Let's get in touch
       </h2>
