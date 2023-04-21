@@ -44,7 +44,6 @@ var createIndexedPlaneGeometry = function (width, length) {
   geom.setAttribute("position", new THREE.BufferAttribute(positions, 3));
   geom.setAttribute("uv", new THREE.BufferAttribute(uvs, 2));
   geom.setIndex(new THREE.BufferAttribute(index, 1));
-  console.log(geom);
   return geom;
 };
 
@@ -71,9 +70,10 @@ const initScene = function () {
     antialias: true,
     alpha: false,
   });
+  const isMobile = window.innerWidth < 768;
   renderer.setClearColor(0xffffff, 1.0);
   renderer.autoClearColor = false;
-  renderer.setSize(window.innerWidth/2, window.innerHeight/2);
+  renderer.setSize(window.innerWidth/(isMobile ? 1 : 2), window.innerHeight/(isMobile ? 2 : 2));
   document.getElementById("canvas").appendChild(renderer.domElement);
 
   // My Light
@@ -81,15 +81,14 @@ const initScene = function () {
   lights[0].position.set(0, 400, 400);
 
   scene.add(lights[0]);
-
   // My Camera
   camera = new THREE.PerspectiveCamera(
-    window.innerWidth >= 768 ? 40 : 70,
-    window.innerWidth / window.innerHeight,
+    isMobile ? 30 : 30,
+    window.innerWidth * (isMobile ? 2 : 1)/ window.innerHeight,
     0.1,
     1000
   );
-  camera.position.set(0, 0, 350);
+  camera.position.set(0, 0, 550);
 };
 
 function rotateObject(object, degreeX = 0, degreeY = 0, degreeZ = 0) {

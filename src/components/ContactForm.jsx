@@ -1,11 +1,10 @@
-import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState, useRef } from "react";import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const ContactForm = () => {
   const [status, setStatus] = useState("Send");
   const form = useRef();
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("Sending...");
@@ -31,21 +30,21 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="bg-white lg:mx-auto lg:w-[60%]">
+      <div className="bg-white lg:mx-auto lg:w-[50%]">
         <div className="full mx-auto px-4 py-8 lg:py-16">
           <form
             ref={form}
             action="#"
-            className="min-w-[250px] space-y-5 font-['RobotoRegular'] text-sm md:text-lg"
+            className="min-w-[250px] space-y-5 font-['Inter'] text-base text-main-color md:text-lg "
             onSubmit={handleSubmit}
           >
-            <div className="flex flex-col gap-5 md:flex-row ">
+            <div className="flex flex-col gap-5 pb-5 md:flex-row">
               <div className="border-b border-gray-300 md:w-1/2">
                 <input
                   type="text"
                   id="subject"
                   name="subject"
-                  className="mr-3 w-full appearance-none border-none bg-transparent py-1 leading-tight  text-gray-700 focus:outline-none"
+                  className="mr-3 w-full appearance-none border-none bg-transparent py-1 leading-tight  focus:outline-none"
                   placeholder="Subject"
                   required
                 />
@@ -56,7 +55,7 @@ const ContactForm = () => {
                   type="email"
                   id="email"
                   name="email"
-                  className="mr-3 w-full appearance-none border-none bg-transparent py-1 leading-tight  text-gray-700 focus:outline-none"
+                  className="mr-3 w-full appearance-none border-none bg-transparent py-1 leading-tight focus:outline-none"
                   placeholder="Your email"
                   required
                 />
@@ -68,13 +67,42 @@ const ContactForm = () => {
                 id="message"
                 name="message"
                 rows={6}
-                className="mr-3 w-full appearance-none border-none bg-transparent py-1 leading-tight  text-gray-700 focus:outline-none"
+                className="mr-3 w-full appearance-none border-none bg-transparent py-1 leading-tight  focus:outline-none"
                 placeholder="How can we help you?"
               ></textarea>
             </div>
+            <div className="border-b border-gray-300 relative">
+              <label
+                className="mb-3 text-gray-400"
+                htmlFor="grid-state"
+              >
+                What is you budget for this project
+              </label>
+              <div className="">
+                <select
+                  className="block w-full appearance-none border-b border-gray-200 pt-3 pr-8 leading-tight focus:outline-none"
+                  id="grid-state"
+                >
+                  <option value = "less than $5,000"> less than $5,000 </option>
+                  <option value = "$5,000 - $10,000">$5,000 - $10,000</option>
+                  <option value = "$10,000 - $20,000">$10,000 - $20,000</option>
+                  <option value = "$20,000 - $40,000">$20,000 - $40,000</option>
+                  <option value = "$40,000+">$40,000+</option>
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-0 top-7 flex items-center text-gray-700">
+                  <svg
+                    className="h-4 w-4 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
             <div className="flex justify-center pt-5">
               <button
-                className="border-2 px-10 py-2 text-gray-500"
+                className="btn orange-btn"
                 disabled={status === "Sending..."}
               >
                 {status}

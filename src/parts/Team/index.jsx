@@ -1,4 +1,5 @@
-import React from "react";import MemberCard from "./MemberCard";
+import React from "react";
+import MemberCard from "./MemberCard";
 import { team } from "../../constants/team";
 
 const Team = () => {
@@ -9,10 +10,11 @@ const Team = () => {
           <div>Meet The Team</div>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-center gap-x-8">
+      <div className="w-full grid grid-cols-3 items-center justify-between gap-x-24 gap-y-24">
         {team.map((member, index) => (
           <MemberCard
             key={index}
+            index={index}
             name={member.name}
             photo={member.photo}
             role={member.role}
