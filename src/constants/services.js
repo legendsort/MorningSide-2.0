@@ -1,30 +1,28 @@
-export const services = [
-  {
-    name: "GPT-3 | GPT 4 Development",
+export const services = [  {
+    name: ["GPT-3 | GPT 4", "Development"],
     services: [
-      "Text generation",
-      "Question answering",
+      "Language synthesis",
+      "Knowledge response",
       "Chatbot development",
-      "Models optimization",
+      "Model tuning",
     ],
   },
   {
-    name: "ML Software Development",
+    name: ["AI", "Consulting"],
     services: [
-      "ML Ops",
-      "Backend development",
-      "Data engineering",
-      "Deployment",
+      "Feasibility assessments",
+      "Use case identification",
+      "Performance evaluation",
+      "Strategy development",
     ],
   },
   {
-    name: "Natural Language Processing",
+    name: ["Natural Language", "Processing"],
     services: [
-      "Text classification",
-      "Information extraction",
+      "Document categorization",
+      "Data mining",
       "Text summarization",
-      "Named-entity recognition",
+      "Entity identification",
     ],
   },
-
 ];

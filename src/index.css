@@ -71,7 +71,7 @@ html {
     border-radius: 16px;
 	}
   .service-card {
-    @apply font-['SpaceGrotesk'] font-bold text-2xl max-w-[220px] mx-auto mb-4
+    @apply font-['SpaceGrotesk'] font-bold text-2xl mx-auto mb-4
    }
   .service-card-item {
     @apply font-['Inter'] text-base text-[#4D5761]

@@ -19,7 +19,8 @@ const Services = () => {
               {services.map((service, index) => {
                 return (
                   <div key={index} className="col-span-3 md:col-span-1 card px-4 py-8 mx-10">
-                    <div className="service-card">{service.name}</div>
+                    <div className="service-card">{service.name[0]}<br />{service.name[1]}</div>
+                    
                     {service.services.map((item, index) => (
                       <p key={index} className="service-card-item">
                         {item}

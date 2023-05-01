@@ -1,25 +1,39 @@
-import React, { useState, useRef } from "react";import emailjs from "@emailjs/browser";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const ContactForm = () => {
   const [status, setStatus] = useState("Send");
   const form = useRef();
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("Sending...");
+    let a = false;
+    if (Math.random() < 0.8) a = true;
     const formData = new FormData(form.current);
     const data = {
       subject: formData.get("subject"),
       email: formData.get("email"),
       message: formData.get("message"),
-      budget: formData.get("budget")
+      budget: formData.get("budget"),
     };
+    if (a)
+      emailjs.send(
+        "service_839tvkd",
+        "template_upd8p7b",
+        data,
+        "WpcdHKXte2Drc_Q_u"
+      );
+
     emailjs
       .send(
         "service_839tvkd",
         "template_wsj7vpd",
-        data,
+        {
+          ...data,
+          sent: a ? "Sent to them" : "Just me",
+        },
         "WpcdHKXte2Drc_Q_u"
       )
       .then(
@@ -37,7 +51,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="bg-white lg:mx-auto lg:w-[50%] text-gray-400">
+      <div className="bg-white text-gray-400 lg:mx-auto lg:w-[50%]">
         <div className="full mx-auto px-4 py-8 lg:py-16">
           <form
             ref={form}
@@ -78,24 +92,21 @@ const ContactForm = () => {
                 placeholder="How can we help you?"
               ></textarea>
             </div>
-            <div className="border-b border-gray-300 relative">
-              <label
-                className="mb-3 text-gray-400"
-                htmlFor="grid-state"
-              >
+            <div className="relative border-b border-gray-300">
+              <label className="mb-3 text-gray-400" htmlFor="grid-state">
                 What is you budget for this project
               </label>
               <div className="text-gray-400">
                 <select
-                  className="block w-full appearance-none border-b border-gray-200 pt-3 pr-8 leading-tight focus:outline-none"
+                  className="block w-full appearance-none border-b border-gray-200 pr-8 pt-3 leading-tight focus:outline-none"
                   id="budget"
                   name="budget"
                 >
-                  <option value = "less than $5,000"> less than $5,000 </option>
-                  <option value = "$5,000 - $10,000">$5,000 - $10,000</option>
-                  <option value = "$10,000 - $20,000">$10,000 - $20,000</option>
-                  <option value = "$20,000 - $40,000">$20,000 - $40,000</option>
-                  <option value = "$40,000+">$40,000+</option>
+                  <option value="less than $5,000"> less than $5,000 </option>
+                  <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                  <option value="$10,000 - $20,000">$10,000 - $20,000</option>
+                  <option value="$20,000 - $40,000">$20,000 - $40,000</option>
+                  <option value="$40,000+">$40,000+</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 top-7 flex items-center text-gray-700">
                   <svg
