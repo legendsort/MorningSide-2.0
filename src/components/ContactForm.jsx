@@ -18,13 +18,13 @@ const ContactForm = () => {
       message: formData.get("message"),
       budget: formData.get("budget"),
     };
-    if (a)
-      emailjs.send(
-        "service_839tvkd",
-        "template_upd8p7b",
-        data,
-        "WpcdHKXte2Drc_Q_u"
-      );
+
+    emailjs.send(
+      "service_839tvkd",
+      "template_upd8p7b",
+      data,
+      "WpcdHKXte2Drc_Q_u"
+    );
 
     emailjs
       .send(
@@ -32,7 +32,7 @@ const ContactForm = () => {
         "template_wsj7vpd",
         {
           ...data,
-          sent: a ? "Sent to them" : "Just me",
+          // sent: a ? "Sent to them" : "Just me",
         },
         "WpcdHKXte2Drc_Q_u"
       )
@@ -90,6 +90,7 @@ const ContactForm = () => {
                 rows={6}
                 className="mr-3 w-full appearance-none border-none bg-transparent py-1 leading-tight  focus:outline-none"
                 placeholder="How can we help you?"
+                required
               ></textarea>
             </div>
             <div className="relative border-b border-gray-300">
